@@ -59,9 +59,9 @@ public class ProblemC {
 			sort(yraglacHand);
 			
 			ArrayList<Integer> possibleTies = new ArrayList<Integer>();
-			for( int i = 25; i >= 0; i-- ) {
+			for( int i = 0; i < 26 ; i++ ) {
 				boolean cardFound = false;
-				for( int j = 25; j >= 0; j--) {
+				for( int j = 0; j < 26 ; j++) {
 					if(yraglacHand[j] > friendsHand[i] ) {
 						yraglacHand[j] = 0;
 						maxCards += 2;
