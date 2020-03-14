@@ -1,11 +1,5 @@
 import java.util.*;
 
-/* The first line of the input contains a single integer, N, indicating the number of games of war to be played. Following, there are two lines of input for each game. 
- * The first of the two lines contains a 26-character string indicating the cards in the opponent’s pile, in the order that they will be played.
- * Non-numeric cards are encoded with a single capital letter as described in the problem statement.
- * The second of the two lines indicates the 26 cards in Yraglac’s pile. Both piles together will always form the set of cards in a standard 52-card deck.
- * In our variant of War for this problem, when a tie in rank occurs, both players take their one card back.
- */
 public class ProblemC {
 	
 	public static void main(String[] args) {
@@ -39,6 +33,7 @@ public class ProblemC {
 					friendsHand[i] = friendsHandC[i] - 48; 
 				}
 			}
+			
 			for(int i = 0; i < 26; i++) {
 				if( yraglacHandC[i] == 'T') {
 					yraglacHand[i] = 10;
@@ -59,6 +54,7 @@ public class ProblemC {
 					yraglacHand[i] = yraglacHandC[i] - 48; 
 				}
 			}
+			
 			sort(friendsHand);
 			sort(yraglacHand);
 			
@@ -90,13 +86,6 @@ public class ProblemC {
 		}
 			System.out.println(maxCards);
 		}
-		
-		/*for( int c : friendsHand ) {
-			System.out.println(c);
-		}
-		System.out.println();
-		*/
-
 	}
 
 	private static void sort(int[] hand) {
