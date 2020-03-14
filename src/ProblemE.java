@@ -77,15 +77,14 @@ public class ProblemE {
 		String[] firstMelody = new String[melody];
 		String[] secondMelody = new String[melody];
 		
-		Scanner scan = new Scanner(System.in);
 		for(int i = 0; i < melody; i++)
 		{
-		    firstMelody[i] = scan.next();
+		    firstMelody[i] = in.next();
 		}
-		Scanner scan1 = new Scanner(System.in);
+
 		for(int i = 0; i < melody; i++)
 		{
-		    secondMelody[i] = scan1.next();
+		    secondMelody[i] = in.next();
 		}
 
 		int[] melodyOne = convertNotes(melody,firstMelody);
