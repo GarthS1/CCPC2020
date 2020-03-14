@@ -24,7 +24,7 @@ public class ProblemG {
 			int temp = f1;
 			f1 += f0;
 			f0 = temp;
-			for( int i = 0 ; i< newFib.size(); i++ ) {
+			for( int i = 0 ; i < newFib.size(); i++ ) {
 				if( (f1 % mod) == newFib.get(i)) {
 					noRepeatFound = false;
 					index += i;
