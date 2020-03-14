@@ -5,12 +5,12 @@ public class ProblemG {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int queries  = scan.nextInt();
-		
 		for( int i = 0; i < queries; i++ ) {
 			int mod = scan.nextInt();
 			System.out.println(findNextRepeat(mod));
 		}
 	}
+
 
 	private static int findNextRepeat(int mod) {
 		
@@ -19,8 +19,8 @@ public class ProblemG {
 		boolean noRepeatFound = true;
 		ArrayList<Integer> newFib = new ArrayList<Integer>();
 		int index = 2;
-		
-		while(noRepeatFound) {
+
+		while( noRepeatFound ) {
 			int temp = f1;
 			f1 += f0;
 			f0 = temp;
@@ -28,10 +28,11 @@ public class ProblemG {
 				if( (f1 % mod) == newFib.get(i)) {
 					noRepeatFound = false;
 					index += i;
+					return index;
 				}
 			}
 			newFib.add( f1 % mod);
 		}
-		return index;
+		return -1;
 	}
 }
