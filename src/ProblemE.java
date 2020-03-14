@@ -48,10 +48,12 @@ public class ProblemE {
 	
 	static public boolean checkInversion(int length, int[] m1, int[] m2) {
 		
-		for(int i = 0; i < length-1; i++) {
-			int difference = m1[i+1] - m1[0];
-			int difference2 = m2[0] - m2[i+1];
-			if(difference2 < 0 )
+		for(int i = 0; i < length; i++) {
+			int difference = m1[i] - m1[0];
+			if(difference <= 0 )
+				difference += 12;
+			int difference2 = m2[0] - m2[i];
+			if(difference2 <= 0 )
 				difference2 += 12;
 			
 			if(difference2 != difference)
@@ -61,8 +63,8 @@ public class ProblemE {
 	}
 	
 	static public boolean checkRetrograde(int length, int[]m1, int[]m2) {
-		for(int i = 0; i < length; i++) {
-			if(m1[i] != m2[length -1-i])
+		for(int i = 0; i < length / 2; i++) {
+			if(m1[i] != m2[length - 1 - i])
 				return false;
 		}
 		
