@@ -48,7 +48,7 @@ public class ProblemE {
 	
 	static public boolean checkInversion(int length, int[] m1, int[] m2) {
 		
-		for(int i = 0; i < length; i++) {
+		for(int i = 1; i < length; i++) {
 			int difference = m1[i] - m1[0];
 			if(difference <= 0 )
 				difference += 12;
@@ -63,7 +63,7 @@ public class ProblemE {
 	}
 	
 	static public boolean checkRetrograde(int length, int[]m1, int[]m2) {
-		for(int i = 0; i < length / 2; i++) {
+		for(int i = 0; i < length ; i++) {
 			if(m1[i] != m2[length - 1 - i])
 				return false;
 		}
@@ -95,10 +95,10 @@ public class ProblemE {
 		
 		if(checkTransposition(melody,melodyOne, melodyTwo))
 			System.out.println("Transposition");
-		else if(checkInversion(melody,melodyOne, melodyTwo))
-			System.out.println("Inversion");
 		else if(checkRetrograde(melody,melodyOne,melodyTwo))
 			System.out.println("Retrograde");
+		else if(checkInversion(melody,melodyOne, melodyTwo))
+			System.out.println("Inversion");
 		else
 			System.out.println("Nonsense");
 		
