@@ -11,7 +11,6 @@ public class ProblemG {
 		}
 	}
 
-
 	private static int findNextRepeat(int mod) {
 		
 		int f0 = 1;
@@ -22,16 +21,16 @@ public class ProblemG {
 
 		while( noRepeatFound ) {
 			int temp = f1;
-			f1 += f0;
+			f1 = (f1 + f0) % mod;
 			f0 = temp;
 			for( int i = 0 ; i < newFib.size(); i++ ) {
-				if( (f1 % mod) == newFib.get(i)) {
+				if( (f1 ) == newFib.get(i)) {
 					noRepeatFound = false;
 					index += i;
 					return index;
 				}
 			}
-			newFib.add( f1 % mod);
+			newFib.add( f1);
 		}
 		return -1;
 	}

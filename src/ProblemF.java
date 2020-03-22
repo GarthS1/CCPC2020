@@ -5,7 +5,7 @@ public class ProblemF {
 	private String key;
 
 	public static void main(String args[]) {
-		ExerciseF test = new ExerciseF();
+		ProblemF test = new ProblemF();
 		test.gatherInput();
 		System.out.println(test.decrypt());
 	}

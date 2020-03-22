@@ -58,7 +58,20 @@ public class ProblemC {
 			sort(friendsHand);
 			sort(yraglacHand);
 			
-			ArrayList<Integer> possibleTies = new ArrayList<Integer>();
+			for(int i = 0; i < 26; i++) {
+				int cards = 0;
+				for(int j = 0; j < 26; j++) {
+					if(yraglacHand[(i+j) % 26 ] > friendsHand[j] ) {
+						cards += 2;
+					}
+					else if( yraglacHand[(i+j) % 26 ] == friendsHand[j]) {
+						cards += 1;
+					}
+				}
+				if( cards > maxCards)
+					maxCards = cards;
+			}
+			/*ArrayList<Integer> possibleTies = new ArrayList<Integer>();
 			for( int i = 0; i < 26 ; i++ ) {
 				boolean cardFound = false;
 				for( int j = 0; j < 26 ; j++) {
@@ -82,7 +95,7 @@ public class ProblemC {
 						break;
 					}
 			}
-		}
+		}*/
 			System.out.println(maxCards);
 		}
 	}
