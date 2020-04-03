@@ -1,3 +1,25 @@
+/**
+Alex and Barb are waiting for their two cousins to visit for dinner. 
+Since their cousins tend to get involved in all sorts of shenanigans, Alex and Barb decide to pass the time with a little card game.
+
+The game is as follows: there is a stack of k cards on the table. 
+Alex and Barb take turns taking from m to n cards, beginning with Alex. The first player with no valid moves left loses.
+
+Given k, m, and n, determine which player will win the game provided that both play with an optimal strategy.
+
+Inputs
+The input consists of a single line containing three space-separated integers 1≤k≤109 and 1≤m≤n≤109.
+
+Outputs
+On a single line output the name of the winning player.
+
+Sample Input 1	Sample Output 1
+5 2 2
+Barb
+Sample Input 2	Sample Output 2
+25 3 10
+Alex
+**/
 import java.util.Scanner;
 
 public class ProblemA {
